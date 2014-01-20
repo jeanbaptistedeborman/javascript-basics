@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>javascript basics</title>
+		<meta name="description" content="Las bases du javascript" />
+		<script>
+		
+		window.onload =  function (){
+			alert ('onload')
+			//Number
+			var a = 1;
+			//document.write(a + a);
+			
+			//String
+			a = '1';
+			//document.write(a + a);
+			
+			//Boolean
+			var bool = false; 
+			console.log (bool);
+			console.log (Number (bool)); 
+			
+			//Array
+			var array = [1,2,3,4]; 
+			console.log (array[3]);
+			
+			//Obect
+			var objet = {a:1, b:2};
+			console.log (objet.a);
+			
+			// fonction
+			
+			var fonction  = function (argument) {
+				
+				
+			}  
+			 
+			
+			// Objet instancié. 
+			var Classe = function() {
+				this.eleves_array = ['jean', 'julie', 'pierre'],
+				this.compteEleves = function() {
+					return this.eleves_array.length;
+
+				}
+				this.addEleves = function(eleve_str) {
+					this.eleves_array.push(eleve_str);
+
+				}
+			};
+			
+			
+			var classe = new Classe();
+
+			classe.name = "3 eme EMU";
+			console.log(classe.compteEleves());
+			classe.addEleves("Delphine");
+			console.log(JSON.stringify(classe));
+			
+			//
+			
+			//Le HTML Dynamique : c'est parti ! 
+			
+			var element = document.getElementById('test');
+			console.log (element); 
+			element.innerHTML = "hello world";
+			
+		}
+
+		</script>
+
+	</head>
+
+
+		<div id='test'>test</div>
+
+</html>
